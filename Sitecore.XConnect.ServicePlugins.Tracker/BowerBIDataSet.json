@@ -1,0 +1,436 @@
+﻿{
+  "name": "Contact Interaction",
+  "defaultMode": "Push",
+  "tables": [
+    {
+      "name": "Interaction",
+      "columns": [
+        {
+          "name": "Id",
+          "dataType": "string"
+        },
+        {
+          "name": "ContactId",
+          "dataType": "string"
+        },
+        {
+          "name": "CampaignId",
+          "dataType": "string"
+        },
+        {
+          "name": "ChannelId",
+          "dataType": "string"
+        },
+        {
+          "name": "VenueId",
+          "dataType": "string"
+        },
+        {
+          "name": "ConcurrencyToken",
+          "dataType": "string"
+        },
+        {
+          "name": "Duration",
+          "dataType": "Int64"
+        },
+        {
+          "name": "StartDataTime",
+          "dataType": "DateTime"
+        },
+        {
+          "name": "EndDataTime",
+          "dataType": "DateTime"
+        },
+        {
+          "name": "EngagementValue",
+          "dataType": "Int64"
+        }
+      ]
+    },
+    {
+      "name": "Contact",
+      "columns": [
+        {
+          "name": "Id",
+          "dataType": "string"
+        }
+      ]
+    },
+    {
+      "name": "Event",
+      "columns": [
+        {
+          "name": "Id",
+          "dataType": "string"
+        },
+        {
+          "name": "ItemId",
+          "dataType": "string"
+        },
+        {
+          "name": "InteractionId",
+          "dataType": "string"
+        },
+        {
+          "name": "Text",
+          "dataType": "string"
+        },
+        {
+          "name": "DefenitionId",
+          "dataType": "string"
+        },
+        {
+          "name": "Duration",
+          "dataType": "Int64"
+        },
+        {
+          "name": "Timestamp",
+          "dataType": "DateTime"
+        },
+        {
+          "name": "EngagementValue",
+          "dataType": "Int64"
+        }
+      ]
+    },
+    {
+      "name": "IpFacet",
+      "columns": [
+        {
+          "name": "InteractionId",
+          "dataType": "string"
+        },
+        {
+          "name": "AreaCode",
+          "dataType": "string"
+        },
+        {
+          "name": "BusinessName",
+          "dataType": "string"
+        },
+        {
+          "name": "City",
+          "dataType": "string"
+        },
+        {
+          "name": "Country",
+          "dataType": "string"
+        },
+        {
+          "name": "IpAddress",
+          "dataType": "string"
+        },
+        {
+          "name": "Isp",
+          "dataType": "string"
+        },
+        {
+          "name": "Latitude",
+          "dataType": "Double"
+        },
+        {
+          "name": "Longitude",
+          "dataType": "Double"
+        },
+        {
+          "name": "LocationId",
+          "dataType": "string"
+        },
+        {
+          "name": "MetroCode",
+          "dataType": "string"
+        },
+        {
+          "name": "PostalCode",
+          "dataType": "string"
+        },
+        {
+          "name": "Region",
+          "dataType": "string"
+        },
+        {
+          "name": "Url",
+          "dataType": "string"
+        },
+        {
+          "name": "Dns",
+          "dataType": "string"
+        }
+      ]
+    },
+    {
+      "name": "UserAgentFacet",
+      "columns": [
+        {
+          "name": "InteractionId",
+          "dataType": "string"
+        },
+        {
+          "name": "DeviceType",
+          "dataType": "string"
+        },
+        {
+          "name": "DeviceVendor",
+          "dataType": "string"
+        },
+        {
+          "name": "DeviceVendorHardwareModel",
+          "dataType": "string"
+        }
+      ]
+    },
+    {
+      "name": "ProfileScoresFacet",
+      "columns": [
+        {
+          "name": "InteractionId",
+          "dataType": "string"
+        },
+        {
+          "name": "ScoreId",
+          "dataType": "string"
+        },
+        {
+          "name": "MatchedPatternId",
+          "dataType": "string"
+        },
+        {
+          "name": "ProfileDefinitionId",
+          "dataType": "string"
+        },
+        {
+          "name": "ScoreCount",
+          "dataType": "Int64"
+        },
+        {
+          "name": "Score",
+          "dataType": "Double"
+        },
+        {
+          "name": "ValueId",
+          "dataType": "string"
+        },
+        {
+          "name": "Value",
+          "dataType": "Double"
+        }
+      ]
+    },
+    {
+      "name": "WebVisitFacet",
+      "columns": [
+        {
+          "name": "InteractionId",
+          "dataType": "string"
+        },
+        {
+          "name": "BrowserMajorName",
+          "dataType": "string"
+        },
+        {
+          "name": "BrowserMinorName",
+          "dataType": "string"
+        },
+        {
+          "name": "BrowserVersion",
+          "dataType": "string"
+        },
+        {
+          "name": "Language",
+          "dataType": "string"
+        },
+        {
+          "name": "MajorVersion",
+          "dataType": "string"
+        },
+        {
+          "name": "MinorVersion",
+          "dataType": "string"
+        },
+        {
+          "name": "Name",
+          "dataType": "string"
+        },
+        {
+          "name": "Referrer",
+          "dataType": "string"
+        },
+        {
+          "name": "ReferringSite",
+          "dataType": "string"
+        },
+        {
+          "name": "ScreenWidth",
+          "dataType": "Int64"
+        },
+        {
+          "name": "ScreenHeight",
+          "dataType": "Int64"
+        },
+        {
+          "name": "SearchKeywords",
+          "dataType": "string"
+        },
+        {
+          "name": "SiteName",
+          "dataType": "string"
+        }
+      ]
+    },
+    {
+      "name": "CampaignDefinition",
+      "columns": [
+        {
+          "name": "Id",
+          "dataType": "string"
+        },
+        {
+          "name": "Name",
+          "dataType": "string"
+        }
+      ]
+    },
+    {
+      "name": "ChannelDefinition",
+      "columns": [
+        {
+          "name": "Id",
+          "dataType": "string"
+        },
+        {
+          "name": "Name",
+          "dataType": "string"
+        }
+      ]
+    },
+    {
+      "name": "GoalDefinition",
+      "columns": [
+        {
+          "name": "Id",
+          "dataType": "string"
+        },
+        {
+          "name": "Name",
+          "dataType": "string"
+        }
+      ]
+    },
+    {
+      "name": "MatchedPatternDefinition",
+      "columns": [
+        {
+          "name": "Id",
+          "dataType": "string"
+        },
+        {
+          "name": "Name",
+          "dataType": "string"
+        }
+      ]
+    },
+    {
+      "name": "ProfileDefinition",
+      "columns": [
+        {
+          "name": "Id",
+          "dataType": "string"
+        },
+        {
+          "name": "Name",
+          "dataType": "string"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "name": "InteractionContact",
+      "fromTable": "Interaction",
+      "fromColumn": "ContactId",
+      "toTable": "Contact",
+      "toColumn": "Id",
+      "crossFilteringBehavior": "OneDirection"
+    },
+    {
+      "name": "EventInteraction",
+      "fromTable": "Event",
+      "fromColumn": "InteractionId",
+      "toTable": "Interaction",
+      "toColumn": "Id",
+      "crossFilteringBehavior": "OneDirection"
+    },
+    {
+      "name": "IpFacetInteraction",
+      "fromTable": "IpFacet",
+      "fromColumn": "InteractionId",
+      "toTable": "Interaction",
+      "toColumn": "Id",
+      "crossFilteringBehavior": "OneDirection"
+    },
+    {
+      "name": "UserAgentFacetInteraction",
+      "fromTable": "UserAgentFacet",
+      "fromColumn": "InteractionId",
+      "toTable": "Interaction",
+      "toColumn": "Id",
+      "crossFilteringBehavior": "OneDirection"
+    },
+    {
+      "name": "ProfileScoresFacetInteraction",
+      "fromTable": "ProfileScoresFacet",
+      "fromColumn": "InteractionId",
+      "toTable": "Interaction",
+      "toColumn": "Id",
+      "crossFilteringBehavior": "OneDirection"
+    },
+    {
+      "name": "WebVisitFacetInteraction",
+      "fromTable": "WebVisitFacet",
+      "fromColumn": "InteractionId",
+      "toTable": "Interaction",
+      "toColumn": "Id",
+      "crossFilteringBehavior": "OneDirection"
+    },
+    {
+      "name": "InteractionCampaignDefinition",
+      "fromTable": "Interaction",
+      "fromColumn": "CampaignId",
+      "toTable": "CampaignDefinition",
+      "toColumn": "Id",
+      "crossFilteringBehavior": "OneDirection"
+    },
+    {
+      "name": "InteractionChannelDefinition",
+      "fromTable": "Interaction",
+      "fromColumn": "ChannelId",
+      "toTable": "ChannelDefinition",
+      "toColumn": "Id",
+      "crossFilteringBehavior": "OneDirection"
+    },
+    {
+      "name": "EventGoalDefinition",
+      "fromTable": "Event",
+      "fromColumn": "DefenitionId",
+      "toTable": "GoalDefinition",
+      "toColumn": "Id",
+      "crossFilteringBehavior": "OneDirection"
+    },
+    {
+      "name": "ProfileScoresFacetMatchedPatternDefinition",
+      "fromTable": "ProfileScoresFacet",
+      "fromColumn": "MatchedPatternId",
+      "toTable": "MatchedPatternDefinition",
+      "toColumn": "Id",
+      "crossFilteringBehavior": "OneDirection"
+    },
+    {
+      "name": "ProfileScoresFacetProfileDefinition",
+      "fromTable": "ProfileScoresFacet",
+      "fromColumn": "ProfileDefinitionId",
+      "toTable": "ProfileDefinition",
+      "toColumn": "Id",
+      "crossFilteringBehavior": "OneDirection"
+    }
+  ]
+}
